@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Vim для разработчика Ruby on Rails и PHP
-date: 2015-10-23T00:54:00.000Z
+date: {}
 categories: my
 published: true
 ---
+
 
 
 ## Собираем
@@ -126,7 +127,7 @@ set background=dark
 Для этого зайдем в наш проект и 
 
 {% highlight ruby %}
-ctags -R --exclude=".git" -L .srclist
+ctags -R --exclude=".git" .
 {% endhighlight %}
 
 
