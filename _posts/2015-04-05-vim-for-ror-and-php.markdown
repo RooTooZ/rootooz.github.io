@@ -8,6 +8,7 @@ published: true
 
 
 
+
 ## Собираем
 
 ### Vim
@@ -86,39 +87,43 @@ gem install bundler
 {% highlight ruby %}
 
 " Settings RooTooZ
- 
-let g:SuperTabDefaultCompletionType = "context"
-autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
-autocmd BufNewFile,Bufread *.php set keywordprg="help"
- 
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
- 
+" Enable AutoComplPop.
+let g:acp_enableAtStartup = 1
+
+" Bind autocomplete to Ctrl+Space
+inoremap <C-@> <C-n>
+
 set t_Co=256
- 
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/unite.vim'
-Plugin 'shawncplus/phpcomplete.vim'
+
 Bundle 'flazz/vim-colorschemes'
 Bundle 'vim-scripts/dbext.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'markcornick/vim-vagrant'
-Bundle 'joonty/vdebug.git'
-Bundle 'mikehaertl/yii-api-vim'
-Bundle 'Chiel92/vim-autoformat'
- 
+Bundle 'airblade/vim-gitgutter'
+
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-l> :NERDTreeToggle<CR>
 map <C-k> :NERDTreeFind<CR>
-map <C-F> :Autoformat<CR>
-map <C-s> :w<CR>
- 
-colorscheme gruvbox
-"colorscheme hybrid 
-set background=dark
+
+"colorscheme gruvbox
+colorscheme hybrid 
+"set background=dark
+
+let g:lightline = {
+       \ 'colorscheme': 'wombat',
+       \ 'active': {        
+       \   'left': [ [ 'mode', 'paste' ],  
+       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+       \ },                 
+       \ 'component_function': {
+       \   'fugitive': 'MyFugitive',
+       \   'readonly': 'MyReadonly',
+       \   'filename': 'MyFilename',
+       \ },
+       \ 'separator': { 'left': '⮀', 'right': '⮂' },
+       \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+       \ }
+
 
 {% endhighlight %}
 
