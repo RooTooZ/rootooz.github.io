@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "Vim для разработчика Ruby on Rails и PHP"
-date:   2015-04-05 00:54:00
+title: Vim для разработчика Ruby on Rails и PHP
+date: 2015-10-23T00:54:00.000Z
 categories: my
+published: true
 ---
+
 
 ## Собираем
 
@@ -17,9 +19,9 @@ sudo apt-get remove vim-tiny vim-common vim-gui-common
 Если deb установим нужные пакеты
 {% highlight bash %}
 sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
-    libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
-    libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
-    ruby-dev mercurial libperl-dev liblua5.2-dev  
+libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
+libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
+ruby-dev mercurial libperl-dev liblua5.2-dev  
 {% endhighlight %}
 
 Соберем наконец таки вим с нужными флагами
@@ -30,14 +32,28 @@ hg clone https://code.google.com/p/vim/
 cd vim
 
 ./configure --with-features=huge \
-    --enable-multibyte \ 
-    --enable-rubyinterp \
-    --enable-pythoninterp \
-    --with-python-config-dir=/usr/lib/python2.7/config \
-    --enable-perlinterp \
-    --enable-luainterp \
-    --enable-gui=gtk2 --enable-cscope --prefix=/usr
+--enable-multibyte \ 
+--enable-rubyinterp \
+--enable-pythoninterp \
+--with-python-config-dir=/usr/lib/python2.7/config \
+--enable-perlinterp \
+--enable-luainterp \
+--enable-gui=gtk2 --enable-cscope --prefix=/usr
 
+make distclean
+make
+sudo make install
+{% endhighlight %}
+
+Для корректной работы поиска по файлам и классам нужно поствить exuberant ctags        
+{% highlight bash %}
+cd ~/programms   
+wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz 
+tar -zxvf ctags-5.8.tar.gz
+
+cd ctags-5.8
+make
+sudo make install
 {% endhighlight %}
 
 ### RVM
@@ -104,5 +120,15 @@ colorscheme gruvbox
 set background=dark
 
 {% endhighlight %}
+
+### Настроим автодополнение
+
+Для этого зайдем в наш проект и 
+
+{% highlight ruby %}
+ctags -R --exclude=".git" -L .srclist
+{% endhighlight %}
+
+
 
 Теперь у нас есть Vim с поддержкой авто дополнения к PHP и Rails
