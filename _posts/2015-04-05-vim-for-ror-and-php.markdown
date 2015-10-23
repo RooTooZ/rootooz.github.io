@@ -86,8 +86,8 @@ gem install bundler
 Добавим в него дополнительные настройки
 
 {% highlight ruby %}
-
 " Settings RooTooZ
+
 " Enable AutoComplPop.
 let g:acp_enableAtStartup = 1
 
@@ -99,32 +99,39 @@ set t_Co=256
 Bundle 'flazz/vim-colorschemes'
 Bundle 'vim-scripts/dbext.vim'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'Chiel92/vim-autoformat'
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-l> :NERDTreeToggle<CR>
 map <C-k> :NERDTreeFind<CR>
+noremap <F3> :Autoformat<CR>
 
-"colorscheme gruvbox
-colorscheme hybrid 
-"set background=dark
+colorscheme gruvbox
+"colorscheme jellybeans 
+"colorscheme hybrid 
+set background=dark
 
 let g:lightline = {
-       \ 'colorscheme': 'wombat',
-       \ 'active': {        
-       \   'left': [ [ 'mode', 'paste' ],  
-       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-       \ },                 
-       \ 'component_function': {
-       \   'fugitive': 'MyFugitive',
-       \   'readonly': 'MyReadonly',
-       \   'filename': 'MyFilename',
-       \ },
-       \ 'separator': { 'left': '⮀', 'right': '⮂' },
-       \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-       \ }
+      \ 'colorscheme': 'jellybeans',
+      \ 'active': {        
+      \   'left': [ [ 'mode', 'paste' ],  
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },                 
+      \ 'component_function': {
+      \   'fugitive': 'MyFugitive',
+      \   'readonly': 'MyReadonly',
+      \   'filename': 'MyFilename',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
 
+
+let g:formatdef_astyle_php = '"php_beautifier --filters \"ArrayNested Pear(add_header=php)\""' 
+let g:formatters_php = ['astyle_php']
+let g:autoformat_verbosemode = 1
 
 {% endhighlight %}
 
