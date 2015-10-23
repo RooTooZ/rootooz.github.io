@@ -126,10 +126,14 @@ set background=dark
 
 Для этого зайдем в наш проект и 
 
-{% highlight ruby %}
+{% highlight bash %}
 ctags -R --exclude=".git" .
 {% endhighlight %}
 
+Для того чтобы работал **ag** нужно поставить еще **the_silver_searcher**
 
+{% highlight bash %}
+sudo apt-get install silversearcher-ag
+{% endhighlight %}
 
 Теперь у нас есть Vim с поддержкой авто дополнения к PHP и Rails
