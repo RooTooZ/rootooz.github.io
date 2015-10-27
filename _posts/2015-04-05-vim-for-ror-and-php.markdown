@@ -28,17 +28,10 @@ ruby-dev mercurial libperl-dev liblua5.2-dev
 {% highlight bash %}
 mkdir -p ~/programms
 cd ~/programms
-hg clone https://code.google.com/p/vim/
+git clone https://github.com/vim/vim.git
 cd vim
 
-./configure --with-features=huge \
---enable-multibyte \ 
---enable-rubyinterp \
---enable-pythoninterp \
---with-python-config-dir=/usr/lib/python2.7/config \
---enable-perlinterp \
---enable-luainterp \
---enable-gui=gtk2 --enable-cscope --prefix=/usr
+./configure --with-features=huge --enable-multibyte --enable-rubyinterp --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config --enable-perlinterp --enable-luainterp --enable-gui=gtk2 --enable-cscope --prefix=/usr
 
 make distclean
 make
@@ -84,6 +77,8 @@ gem install bundler
 
 {% highlight ruby %}
 " Settings RooTooZ
+let g:yadr_using_unsolarized_terminal = 1                                                                                                                                                                                                
+let g:yadr_disable_solarized_enhancements = 1
 
 " Enable AutoComplPop.
 let g:acp_enableAtStartup = 1
@@ -97,6 +92,7 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'vim-scripts/dbext.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Chiel92/vim-autoformat'
+Bundle 'schickling/vim-bufonly'
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif 
@@ -104,6 +100,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 map <C-l> :NERDTreeToggle<CR>
 map <C-k> :NERDTreeFind<CR>
 noremap <F3> :Autoformat<CR>
+noremap <F4> :BufOnly<CR>
 
 colorscheme gruvbox
 "colorscheme jellybeans 
@@ -124,11 +121,6 @@ let g:lightline = {
       \ 'separator': { 'left': '⮀', 'right': '⮂' },
       \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
       \ }
-
-
-let g:formatdef_astyle_php = '"php_beautifier --filters \"ArrayNested Pear(add_header=php)\""' 
-let g:formatters_php = ['astyle_php']
-let g:autoformat_verbosemode = 1
 
 {% endhighlight %}
 
