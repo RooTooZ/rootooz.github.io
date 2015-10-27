@@ -7,9 +7,6 @@ categories: my
 published: true
 ---
 
-
-
-
 ## Собираем
 
 ### Vim
