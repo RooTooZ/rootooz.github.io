@@ -5,7 +5,7 @@ description: "zsh, tmux, rootooz, vim для программиста"
 category: 
 tags: [vim, zsh, tmux]
 excerpt_separator: <!--more-->
-
+published: false 
 ---
 ![My helpful screenshot](/assets/images/zsh_vim_preview.png)
 <!--more-->
