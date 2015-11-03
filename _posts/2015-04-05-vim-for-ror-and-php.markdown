@@ -77,16 +77,10 @@ gem install bundler
 
 {% highlight ruby %}
 " Settings RooTooZ
-let g:yadr_using_unsolarized_terminal = 1                                                                                                                                                                                                
-let g:yadr_disable_solarized_enhancements = 1
-
-" Enable AutoComplPop.
-let g:acp_enableAtStartup = 1
 
 " Bind autocomplete to Ctrl+Space
 inoremap <C-@> <C-n>
-
-set t_Co=256
+inoremap <C-@><C-@> <C-x><C-o>
 
 Bundle 'flazz/vim-colorschemes'
 Bundle 'vim-scripts/dbext.vim'
@@ -102,10 +96,13 @@ map <C-k> :NERDTreeFind<CR>
 noremap <F3> :Autoformat<CR>
 noremap <F4> :BufOnly<CR>
 
-colorscheme gruvbox
-"colorscheme jellybeans 
-"colorscheme hybrid 
-set background=dark
+" colorscheme railscasts 
+" colorscheme twilight256
+" colorscheme gruvbox
+" colorscheme wombat256 
+" colorscheme jellybeans 
+colorscheme hybrid 
+" set background=dark
 
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
@@ -122,6 +119,16 @@ let g:lightline = {
       \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
       \ }
 
+
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+" let g:formatdef_astyle_php = '"php_beautifier --filters \"ArrayNested Pear(add_header=php)\""' 
+" let g:formatters_php = ['astyle_php']
+" let g:autoformat_verbosemode = 1
+"
+au! FileType haml set noet
 {% endhighlight %}
 
 ### Настроим автодополнение
