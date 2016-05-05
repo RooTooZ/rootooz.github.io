@@ -6,6 +6,7 @@ date:
 categories: my
 published: true
 ---
+<!--more-->
 
 ## Собираем
 
