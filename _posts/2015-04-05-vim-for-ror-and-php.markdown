@@ -4,7 +4,7 @@ title: Vim для разработчика Ruby on Rails и PHP
 date: 
   "2015-10-23 15:10": null
 categories: my
-published: true
+published: false
 ---
 <!--more-->
 
