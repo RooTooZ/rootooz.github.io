@@ -1,0 +1,2 @@
+Host: http://rootooz.com/
+Sitemap: http://rootooz.com/sitemap.xml
