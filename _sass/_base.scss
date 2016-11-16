@@ -202,3 +202,47 @@ pre {
         }
     }
 }
+.bottom-post {
+    box-shadow: 0 -6px 30px -6px #d5d5d5;
+    -webkit-box-shadow: 0 -6px 30px -6px #d5d5d5;
+    -moz-box-shadow: 0 -6px 30px -6px #d5d5d5;
+
+    padding: 2rem;
+    margin-top: 2rem;
+
+    .bottom-header {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .PageNavigation {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        display: block;
+        width: auto;
+        overflow: hidden;
+
+        a {
+            display: block;
+            width: 40%;
+            float: left;
+            margin: 1em 0;
+            text-align: left;
+        }
+        .next {
+            margin-left: 2rem;
+            text-align: right;
+            float: right;
+        }
+
+        .prev {
+            margin-right: 2rem;
+        }
+
+    }
+}
+
+
+
+
+

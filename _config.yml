@@ -1,18 +1,25 @@
 # Site settings
-title: OpenSource разработка от MasterKod'а
+title: Программирование от MasterKod'а
 email: i@rootooz.com
 description: > # this means to ignore newlines until "baseurl:"
-    Персональный блог с рецептами по Ruby on Rails, Linux, Console и не только
+    OpenSource разработка
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://rootooz.com" # the base hostname & protocol for your site
 twitter_username: rootooz
 github_username:  rootooz
+permalink: /:categories/:title
 
 # Build settings
 markdown: kramdown
+timezone: Europe/Moscow
 excerpt_separator: '<!--more-->'
+
+# При выводе всех постов на одной странице
+# используем постраничный вывод
+paginate: 6
+paginate_path: 'page:num'
 
 gems:
   - jekyll-sitemap
-#  - jekyll-coffeescript
-#  - jekyll-paginate
+  - jekyll-paginate
+  - jekyll-seo-tag
