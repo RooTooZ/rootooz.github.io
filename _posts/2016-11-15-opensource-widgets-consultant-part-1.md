@@ -1,12 +1,16 @@
 ---
 layout: post
 title: "OpenSource: Часть 1 - Главный вопрос зачем?"
+
 description: "Начало серии постов о разработке бесплатных виджетов на сайт, этот пост посвящен цели этой серии постов"
 category: opensource
 tags: [opensource, websockets, onLine.Consultant]
 published: true 
+preview_image: "https://hsto.org/files/e52/8f0/8cd/e528f08cd83a4585a6f092776f535678.jpg"
+pre_header: >
+    OpenSource: Часть 1 - Главный вопрос зачем?
 ---
-![Картинка для вставки в превью](https://hsto.org/files/e52/8f0/8cd/e528f08cd83a4585a6f092776f535678.jpg)
+
 <!--more-->
 
 Начинаю цикл статей на тему разработки свободно распространяемых программ. Я буду разрабатывать комплексное приложение

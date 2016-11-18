@@ -4,10 +4,12 @@ title: "Зачем нужен Docker разработчику"
 description: 'зачем нужен docker для разработчка'
 category: develop
 tags: [docker, ruby, develop]
-excerpt_separator: <!--more-->
+preview_image: "/assets/images/docker-compose.png"
 published: true
+pre_header: Зачем нужен Docker разработчику
+pre_text:
+
 ---
-![Preview image](/assets/images/docker-compose.png)
 
 <!--more-->
 

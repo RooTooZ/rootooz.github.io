@@ -1,8 +1,9 @@
-<header class="site-header">
+<header class="site-header parallax-window" data-parallax="scroll" data-image-src="/assets/images/bg_top.png"
+        xmlns="http://www.w3.org/1999/html">
 
-  <div class="wrapper">
+  <div class="wrapper menu">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title white" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -22,6 +23,15 @@
       </div>
     </nav>
 
+  </div>
+  <div class="wrapper description">
+    <h2>{{ page.pre_header }}</h2>
+    <p>{{ page.pre_text }}</p>
+    <p>{{ page.pre_lozung }}{{ page.date | date: "%-d %B, %Y" }}</p>
+  </div>
+  <div class="wrapper social-header">
+      Нравиться блог? <a class="white" href="{{ "/feed.xml" | prepend: site.baseurl }}">Подпишись на RSS</a> и поделись с друзьями!
+      <div class="ya-share2" data-services="vkontakte,twitter,facebook,gplus" data-counter></div>
   </div>
 
 </header>

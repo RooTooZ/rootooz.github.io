@@ -170,6 +170,20 @@ pre {
     }
 }
 
+.description {
+    padding-top: 3rem;
+    color: #ffffff;
+
+    p {
+        font-size: 1rem;
+    }
+
+    @include media-query($on-palm) {
+        text-align: center;
+        padding-top: 0;
+    }
+}
+
 
 
 /**
@@ -237,6 +251,27 @@ pre {
 
         .prev {
             margin-right: 2rem;
+        }
+
+        @include media-query($on-palm) {
+            .next {
+                text-align: left;
+                margin-left: 0rem;
+                float: none;
+            }
+
+            .prev {
+                text-align: left;
+                margin-right: 0rem;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                float: none;
+                margin-top: 2rem;
+                text-align: left;
+            }
         }
 
     }

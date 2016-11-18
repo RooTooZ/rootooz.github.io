@@ -1,12 +1,16 @@
 ---
 layout: post
 title: "OpenSource: Часть 2 - Онлайн Консультант, подготовка, выбор стека технологий"
+
 description: "Начало серии постов о разработке бесплатных виджетов на сайт, этот пост посвящен подготовке к разработке"
 category: opensource
 tags: [opensource, websockets, onLine.Consultant]
+preview_image: "/assets/images/opensource-stack-teknology.png"
 published: true 
+pre_header: >
+    OpenSource: Часть 2 - Онлайн Консультант, подготовка, выбор стека технологий
 ---
-![Картинка для вставки в превью](/assets/images/opensource-stack-teknology.png)
+
 <!--more-->
 
 Из картинки уже ясно что мы будем использовать Yii2 Framework, NodeJS, Socket.IO и Docker.
