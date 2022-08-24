@@ -50,6 +50,7 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
+  jekyll-watch
 
 BUNDLED WITH
    1.13.6

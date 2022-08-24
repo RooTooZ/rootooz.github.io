@@ -277,6 +277,31 @@ pre {
     }
 }
 
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+
+    thead tr {
+        text-align: left;
+        border-bottom: 1px;
+        border-color: #000000;
+    }
+    thead th {
+        padding: 1rem;
+        border-bottom: 1px;
+        border-color: #000000;
+    }
+
+    td {
+        padding: 1rem;
+    }
+}
+
 
 
 
