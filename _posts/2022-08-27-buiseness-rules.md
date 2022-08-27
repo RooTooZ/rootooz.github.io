@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Бизнес требования - Zapishi"
-description: 'Desc'
+description: 'Давай распишем бизнес требования и выясним что мменно мы делаем для MVP'
 category: zapishi
-tags: [event storming, zapishi]
+tags: [event storming, zapishi, mvp]
 preview_image: "/assets/images/zapishi/title.png"
 published: true
 pre_header: Бизнес требования - Zapishi
